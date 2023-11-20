@@ -9,16 +9,23 @@ heal.onclick = function(){Attack(2)}
 flee.onclick = function(){Attack(3)}
 
 var healthPara = document.getElementById("health")
+var killPara = document.getElementById("kill-count")
+var enemyHealthPara = document.getElementById("enemy-health")
+var enemyDmgPara = document.getElementById("enemy-dmg")
+
+var enemyHealth = 30
+var enemyDmg = 15
+
+var kills = 0
 
 var health = 100
-var enemyHealth = 30
-
 var baseDamage = 10
 var healAmount = 15
 
-var enemyDmg = 20
+var isDead = false
 
 function Attack(type){
+    if (isDead) return
     switch(type){
         case (0):
             enemyHealth -= baseDamage
@@ -36,7 +43,19 @@ function Attack(type){
             break
     }
 
-    EnemyAttack(enemyDmg)
+    if (enemyHealth <= 0){
+        enemyHealth = Math.floor(Math.random() * 50) + 15
+        enemyDmg = Math.floor(Math.random() * 20) + 4
+        kills++
+        UpdateText()
+    }
+    else EnemyAttack(enemyDmg)
+    
+    if (health <= 0){
+        isDead = true
+        health = 0
+        alert("you ded")
+    }
 }
 
 function EnemyAttack(dmg){
@@ -46,7 +65,10 @@ function EnemyAttack(dmg){
 }
 
 function UpdateText(){
+    enemyHealthPara.innerHTML = "enemy health: " + enemyHealth
     healthPara.innerHTML = "health: " + health
+    killPara.innerHTML = "kills: " + kills
+    enemyDmgPara.innerHTML = "enemy damage: " + enemyDmg
 }
 
 function Tick(){
@@ -54,3 +76,4 @@ function Tick(){
 }
 
 var tickTimer = setInterval(function(){Tick()}, 16.666667)
+UpdateText()

@@ -8,19 +8,21 @@
 </head>
 <body>
     <center>
+    <div class="enemy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Villainc.svg">
+        <p id="enemy-health"></p>
+        <p id="enemy-dmg"></p>
+    </div>
     <div class="battle-options">
         <button id="attack">attack</button> 
         <button id="magic">magic</button>
         <button id="heal">heal</button>
         <button id="flee">flee</button>
     </div>
-    <div class="enemy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Villainc.svg">
-    </div>
     <div class="player-stats">
         <h1>player stats</h1>
         <p id="health">health: 100</p>
-        <button id="refresh">refresh game</button>
+        <p id="kill-count"></p>
     </div>
 </body>
 <script src="script.js"></script>
