@@ -7,17 +7,16 @@
     <title>Game</title>
 </head>
 <body>
-    <center>
     <div class="enemy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Villainc.svg">
+        <img src="images/enemies/eye.png">
         <p id="enemy-health"></p>
         <p id="enemy-dmg"></p>
     </div>
     <div class="battle-options">
-        <button id="attack">attack</button> 
-        <button id="magic">magic</button>
-        <button id="heal">heal</button>
-        <button id="flee">flee</button>
+        <button id="attack"><img src="images/protagonists/warrior.png" alt="warrior"></button> 
+        <button id="magic"><img src="images/protagonists/mage.png" alt="mage"></button>
+        <button id="heal"><img src="images/protagonists/healer.png" alt="healer"></button>
+        
     </div>
     <div class="player-stats">
         <h1>player stats</h1>
@@ -25,5 +24,8 @@
         <p id="kill-count"></p>
     </div>
 </body>
+<footer>
+    <p>sprite assets courtesy of <a href="https://free-game-assets.itch.io/free-monster-portrait-icons-pixel-art">free game assets</a></p>
+</footer>
 <script src="script.js"></script>
 </html>

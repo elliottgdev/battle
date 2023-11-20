@@ -6,7 +6,7 @@ var flee = document.getElementById("flee")
 button.onclick = function(){Attack(0)}
 magic.onclick = function(){Attack(1)}
 heal.onclick = function(){Attack(2)}
-flee.onclick = function(){Attack(3)}
+//flee.onclick = function(){Attack(3)}
 
 var healthPara = document.getElementById("health")
 var killPara = document.getElementById("kill-count")
@@ -49,8 +49,13 @@ function Attack(type){
         kills++
         UpdateText()
     }
-    else EnemyAttack(enemyDmg)
-    
+    else {
+        if (Math.random() < .8)
+            EnemyAttack(enemyDmg)
+        else
+            alert("enemy attacked and missed!")
+        UpdateText()
+    }
     if (health <= 0){
         isDead = true
         health = 0
