@@ -9,9 +9,13 @@
 </head>
 <body>
     <div class="enemy">
-        <img src="images/enemies/eye.png">
+        <img id="enemy-sprite" src="images/enemies/eye.png">
         <p id="enemy-health"></p>
         <p id="enemy-dmg"></p>
+    </div>
+    <div class="shop">
+        <button id="plus-heals">plus 1 heal - $10</button>
+        <button id="plus-strength">plus strength - $30</button>
     </div>
     <div class="battle-options">
         <button id="attack"><img src="images/protagonists/warrior.png" alt="warrior"></button> 
@@ -23,6 +27,8 @@
         <h1>player stats</h1>
         <p id="health">health: 100</p>
         <p id="kill-count"></p>
+        <p id="money"></p>
+        <p id="heals"></p>
     </div>
 </body>
 <footer>

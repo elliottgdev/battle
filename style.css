@@ -22,10 +22,10 @@ img{
 }
 .battle-options{
     background-color: blue;
-    width: 400px;
+    width: 420px;
     height: fit-content;
     border-style: ridge;
-    margin-right: auto;
+    margin-left: 6px;
     top: 402.5px;
     position: absolute;
 }
@@ -42,9 +42,29 @@ img{
     width: 200px;
     height: fit-content;
     border-style: ridge;
-    margin-left: 421px;
-    top: 383px;
+    margin-left: 426px;
+    top: 337px;
     position: absolute;
+}
+.shop{
+    background-color: blue;
+    width: 450px;
+    height: 63px;
+    border-style: ridge;
+    margin-left: 6px;
+    top: 337px;
+    position: absolute;
+    display: flex;
+}
+.shop button{
+    border: 0;
+    border-bottom: 3px;
+    border-style: ridge;
+    font-size: large;
+    background-color: blue;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
 }
 button{
     background-color: blue;
